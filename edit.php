@@ -8,7 +8,9 @@ if (isset($_GET['id'])) {
     $results = $crud -> getSpecialties();
     $secResult = $crud -> getAttendeeDetail($id);
 ?>
-
+ <a href="viewrecords.php" class="btn btn-outline-primary btn-sm">Back to Records</a>
+ <br>
+ <br>
     
     <form method="post" action="update.php">
         <input type="hidden" name="id" value="<?php echo $secResult['attendee_id']?>"></input>
