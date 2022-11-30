@@ -22,7 +22,7 @@ $results = $crud -> getAttendees();
             <td>
                 <a href="edit.php?id=<?php echo $r['attendee_id']?>" class="btn btn-outline-primary btn-sm">Edit</a>
                 <a href="view.php?id=<?php echo $r['attendee_id']?>" class="btn btn-primary btn-sm">View</a>
-                <a onclick="return confirm('Are you sure you want to delete the record?')" href="delete.php?id=<?php echo $r['attendee_id']?>" class="btn btn-danger btn-sm">Delete</a>
+                <a onclick="return confirm('Are you sure you want to delete this record?')" href="delete.php?id=<?php echo $r['attendee_id']?>" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
     <?php }

@@ -1,3 +1,6 @@
+<?php
+include_once 'session.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,17 +19,27 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <?php $nav = array(
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            
+            <?php
+            //main navigation item
+             $nav = array(
               array("title" => "Home", "url" => "index.php"),
               array("title" => "View Attendees", "url" => "viewrecords.php"),
             );
-
+              //adding the 
               foreach ($nav as $items) {
-                echo '<li class="nav-item"><a class="nav-link" href="'.$items['url'].'">'. $items['title'] .'</a></li>';
-                
+                if ($items['title'] == $title){
+                  echo '<li class="nav-item"><a class="nav-link active" href="'.$items['url'].'">'. $items['title'] .'</a></li>';
+                }else{
+                  echo '<li class="nav-item"><a class="nav-link" href="'.$items['url'].'">'. $items['title'] .'</a></li>';
+                }
               }
             ?>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
           </ul>
         </div>
       </div>

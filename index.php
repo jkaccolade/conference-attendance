@@ -4,6 +4,7 @@ require_once 'Includes/header.php';
 require_once 'db/conn.php';
 
 $results = $crud -> getSpecialties();
+
 ?>
 
     
